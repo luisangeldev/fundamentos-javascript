@@ -22,3 +22,11 @@ function imprimirNombreEnMayusculas(persona) {
 }
 imprimirNombreEnMayusculas(luis);
 imprimirNombreEnMayusculas(dario);
+
+
+function imprimirNombreyEdad({ nombre,edad }) {
+    console.log(`Hola me llamo ${nombre} y tengo ${edad} años`);
+}
+
+imprimirNombreyEdad(luis);
+imprimirNombreyEdad(dario);
