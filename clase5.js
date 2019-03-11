@@ -1,7 +1,7 @@
 var luis = {
     nombre: 'Luis',
     apellido: 'Herrera',
-    edad: 28
+    edad: 29
 }
 
 var dario = {
@@ -30,3 +30,22 @@ function imprimirNombreyEdad({ nombre,edad }) {
 
 imprimirNombreyEdad(luis);
 imprimirNombreyEdad(dario);
+
+/**
+ * Pasando parámetro objeto como referencia
+ * regresa el mismo objto modificado
+ */
+/* function cumpleanos(persona) {
+    persona.edad += 1;
+} */
+
+/**
+ * Pasando parámetro objeto como valor
+ * regresa un nuevo objeto
+ */
+function cumpleanos(persona) {
+    return {
+        ...persona, // los 3 puntos indican que copie todos los valores del objeto
+        edad: persona.edad + 1, // Se sobre-escribe a propiedad edad
+    }
+}
