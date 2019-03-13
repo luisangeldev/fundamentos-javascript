@@ -23,7 +23,7 @@ const siError = function (id){
     console.log(`Sucedió un error. No se pudo obtener el personaje ${id}`);
 }
 
-let ids = [1,2,3,4,'5',6,7];
+let ids = [1,2,3,4,'error',6,7];
 
 const promesas = ids.map( id => getCharacter(id));
 
