@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 53 - Cambiando de contexto al llamar a función</title>
+</head>
+
+<body>
+    <script>
+        const luis = {
+            nombre: 'Luis',
+            apellido: 'Herrera'
+        }
+
+        function saludar(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombre es ${this.nombre}`);
+        }
+        
+        //Con el parámetro bind() se está atando el objeto luis la función saludar
+        // const saludarALuis = saludar.bind(luis);
+
+        //setTimeout(saludar.bind(luis, 'Que onda'), 1000);
+
+        // saludar.call(luis, 'Que onda');
+
+        saludar.apply(luis, ['Que onda wey!! >:D'])
+
+    </script>
+</body>
+
+</html>
